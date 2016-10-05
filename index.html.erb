@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Array Play</title>
+  </head>
+  <body>
+    <h1>Explorer Mode</h1>
+      <h2>Class: Short Names</h2>
+        <ul>
+          <% short.each do |name| %>
+            <li><%= name %></li>
+          <% end %>
+        </ul>
+      <h2>Sentence</h2>
+        <ul>
+          <% short_wd.each do |word| %>
+          <li><%= word %></li>
+          <% end %>
+        </ul>
+      <h2>Budget < 100</h2>
+        <ul>
+          <% lowbud(movies).each do |result| %>
+            <% result.each do |movie| %>
+            <li><%= movie %></li>
+            <% end %>
+          <% end %>
+        </ul>
+        <h2>Leo's Movies</h2>
+          <ul>
+            <% leo(movies).each do |result| %>
+              <% result.each do |movie| %>
+                <li><%= movie %></li>
+              <% end %>
+            <% end %>
+        </ul>
+    <h1>Adventure Mode</h1>
+      <h2>Four Words Method</h2>
+        <ul>
+          <% four_words(sentence).each do |word| %>
+          <li><%= word %></li>
+          <% end %>
+        </ul>
+      <h2>Word Count Method</h2>
+        <ul>
+          <% how_many_words(sentence, 3).each do |word| %>
+            <li><%= word %></li>
+          <% end %>
+        </ul>
+      <h2>Budget Total</h2>
+        <p>
+          <%= budg_total (movies) %>
+        </p>
+  </body>
+</html>
